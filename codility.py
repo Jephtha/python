@@ -49,3 +49,12 @@ def solution(A):
     for x in B:
         if x not in A:
             return x
+
+# Lesson 3, Exercise 2: PermMissingElem second solution (using sets)
+def solution(A):
+    # write your code in Python 3.6
+    length = len(A)+2
+    A_set = set(A)
+    for x in range(1, length):
+        if x not in A_set:
+            return x
