@@ -39,3 +39,13 @@ import math
 def solution(X, Y, D):
     # write your code in Python 3.6
     return math.ceil((Y-X)/D)
+
+# Lesson 3, Exercise 2: PermMissingElem
+def solution(A):
+    # write your code in Python 3.6
+    length = len(A)+2
+    A.sort()
+    B = list(range(1, length))
+    for x in B:
+        if x not in A:
+            return x
