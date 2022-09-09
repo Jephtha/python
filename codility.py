@@ -25,7 +25,7 @@ def solution(A):
         if B[x] % 2 == 1:
             return x  
 
-# Lesson 3, Exercise 1: FrogJmp
+# Lesson 3, Exercise 1: FrogJmp first solution
 def solution(X, Y, D):
     # write your code in Python 3.6
     count = 0
@@ -33,3 +33,9 @@ def solution(X, Y, D):
         X += D
         count += 1
     return count
+
+# Lesson 3, Exercise 1: FrogJmp second solution
+import math
+def solution(X, Y, D):
+    # write your code in Python 3.6
+    return math.ceil((Y-X)/D)
