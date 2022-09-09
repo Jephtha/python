@@ -11,7 +11,7 @@ def solution(A):
 # time complexity of O(n^2), got a score of 66%, with a 100% correctness. the problem
 # was the the time complexity. code is inefficient on larger arrays. so i came up with another solution
 
-# Lesson 2, Exercise 2: OddOccurrencesInArray 2nd solution (using dictionaries)
+# Lesson 2, Exercise 2: OddOccurrencesInArray 2nd solution (using dictionaries) with a better time complexity
 def solution(A):
     # write your code in Python 3.6
     B = {}
@@ -24,3 +24,12 @@ def solution(A):
     for x in B:
         if B[x] % 2 == 1:
             return x  
+
+# Lesson 3, Exercise 1: FrogJmp
+def solution(X, Y, D):
+    # write your code in Python 3.6
+    count = 0
+    while X < Y:
+        X += D
+        count += 1
+    return count
