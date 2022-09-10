@@ -80,3 +80,4 @@ def solution(A):
         splice += A[x]
         diff.append(abs(total - (splice)* 2))
     return min(diff)
+
