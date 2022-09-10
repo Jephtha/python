@@ -81,3 +81,47 @@ def solution(A):
         diff.append(abs(total - (splice)* 2))
     return min(diff)
 
+# Lesson 4, Exercise 1: FrogRiverOne
+
+
+palindrome
+
+find all palindrome substrings and store in a set
+
+def palindrome(value):
+    sIndex = 0
+    endIndex = len(value) - 1
+    
+    while (sIndex < endIndex):
+        if (value[sIndex] != value[endIndex]): 
+            print(sIndex, endIndex)
+            return False
+        sIndex +=1
+        endIndex -=1
+    return True
+
+print(palindrome("babab"))
+
+# find the longest string in the set
+a = {'e', 'oo', 'g', 'l', 'o'}
+print(max(a))
+
+
+
+# ROMAN NUMERALS
+def roman(s):
+    rDict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    total = 0
+
+    for i in range(len(s)):
+        curr = rDict[s[i]]
+        if i != len(s)-1 and rDict[s[i+1]] > curr:
+            total -= curr
+        else: total += curr
+
+    return total
+
+print(roman("III"))
+print(roman("LVIII"))
+print(roman("MCMXCIV"))
+                  
