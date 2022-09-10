@@ -58,3 +58,13 @@ def solution(A):
     for x in range(1, length):
         if x not in A_set:
             return x
+
+# Lesson 3, Exercise 3: TapeEquilibrium 
+def solution(A):
+    # write your code in Python 3.6
+    diff = []
+    for index in range(1, len(A)):
+        half_one = A[:index]
+        half_two = A[index:]
+        diff.append(abs(sum(half_one) - sum(half_two)))
+    return min(diff)
