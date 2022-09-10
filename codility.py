@@ -68,3 +68,15 @@ def solution(A):
         half_two = A[index:]
         diff.append(abs(sum(half_one) - sum(half_two)))
     return min(diff)
+
+# Lesson 3, Exercise 3: TapeEquilibrium second solution
+def solution(A):
+    # write your code in Python 3.6
+    diff = []
+    total = sum(A)
+    splice = 0
+
+    for x in range(len(A)-1):
+        splice += A[x]
+        diff.append(abs(total - (splice)* 2))
+    return min(diff)
