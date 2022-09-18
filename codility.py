@@ -84,9 +84,9 @@ def solution(A):
 # Lesson 4, Exercise 1: FrogRiverOne
 
 
-palindrome
+# palindrome
 
-find all palindrome substrings and store in a set
+# find all palindrome substrings and store in a set
 
 def palindrome(value):
     sIndex = 0
